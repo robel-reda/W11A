@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Selection | FreshBite</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fffaf3;
+        color: #333333;
+    }
+
+    header {
+        background-color: #245c45;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 34px;
+    }
+
+    header p {
+        color: #e4f3e9;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .page-heading {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .page-heading h2 {
+        color: #245c45;
+        font-size: 30px;
+    }
+
+    .page-heading p {
+        color: #666666;
+    }
+
+    #selection-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .food-card {
+        background-color: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        padding-bottom: 22px;
+    }
+
+    .food-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .food-card h2 {
+        color: #245c45;
+        padding: 0 15px;
+    }
+
+    .food-card p {
+        color: #666666;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+
+    button, .home-link {
+        background-color: #f28c28;
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 12px;
+    }
+
+    button:hover, .home-link:hover {
+        background-color: #d97313;
+    }
+
+    .delete-button {
+        background-color: #d94841;
+    }
+
+    .delete-button:hover {
+        background-color: #b42318;
+    }
+
+    .empty-message {
+        grid-column: 1 / -1;
+        text-align: center;
+        background-color: #e9f3eb;
+        border-radius: 12px;
+        padding: 35px 20px;
+    }
+
+    .empty-message h2 {
+        color: #245c45;
+    }
+
+    .empty-message p {
+        color: #666666;
+    }
+
+    .back-section {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    footer {
+        background-color: #245c45;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>🥗 FreshBite</h1>
+    <p>Your personal food selection</p>
+</header>
+
+<main>
+
+    <section class="page-heading">
+        <h2>My Selected Foods</h2>
+        <p>Review your favorite foods or remove anything you no longer want.</p>
+    </section>
+
+    <!-- JavaScript adds the saved food cards here. -->
+    <section id="selection-container"></section>
+
+    <div class="back-section">
+        <a class="home-link" href="index.html">
+            ← Back to Food Store
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <p>FreshBite Food Store | W11A JavaScript Project</p>
+</footer>
+
+<!-- Connect the selection page to the JavaScript file. -->
+<script src="app.js"></script>
+```
+
+</body>
+</html>

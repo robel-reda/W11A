@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshBite | Food Store</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fffaf3;
+        color: #333333;
+    }
+
+    header {
+        background-color: #245c45;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 38px;
+        margin: 0;
+    }
+
+    header p {
+        margin-bottom: 0;
+        color: #e4f3e9;
+    }
+
+    nav {
+        background-color: #ffffff;
+        padding: 18px;
+        text-align: center;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    nav a {
+        color: #245c45;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 12px;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .intro {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+        color: #245c45;
+    }
+
+    .intro p {
+        color: #666666;
+        line-height: 1.6;
+    }
+
+    .food-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+
+    .food-card {
+        background-color: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s;
+    }
+
+    .food-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .food-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .food-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .food-info h3 {
+        color: #245c45;
+        font-size: 23px;
+    }
+
+    .food-info p {
+        color: #666666;
+        line-height: 1.6;
+        min-height: 65px;
+    }
+
+    button, .selection-link {
+        background-color: #f28c28;
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    button:hover, .selection-link:hover {
+        background-color: #d97313;
+    }
+
+    .selection-section {
+        text-align: center;
+        margin-top: 40px;
+        padding: 30px;
+        background-color: #e9f3eb;
+        border-radius: 12px;
+    }
+
+    #message {
+        color: #245c45;
+        font-weight: bold;
+        min-height: 24px;
+    }
+
+    footer {
+        background-color: #245c45;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>🥗 FreshBite</h1>
+    <p>Good food, fresh choices, happy moments.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="selection.html">My Selection</a>
+</nav>
+
+<main>
+
+    <section class="intro">
+        <h2>Choose Your Favorite Food</h2>
+        <p>
+            Welcome to FreshBite! Select your favorite foods
+            and save them to your personal selection.
+        </p>
+    </section>
+
+    <section class="food-container">
+
+        <article class="food-card">
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                alt="Fresh pizza"
+            >
+
+            <div class="food-info">
+                <h3>Classic Pizza</h3>
+
+                <p>
+                    A delicious pizza topped with cheese,
+                    tomato sauce, and fresh ingredients.
+                </p>
+
+                <button onclick="selectFood(0)">
+                    Add to My Selection
+                </button>
+            </div>
+        </article>
+
+        <article class="food-card">
+            <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                alt="Fresh burger"
+            >
+
+            <div class="food-info">
+                <h3>Beef Burger</h3>
+
+                <p>
+                    A juicy burger served with fresh lettuce,
+                    tomato, and a soft bun.
+                </p>
+
+                <button onclick="selectFood(1)">
+                    Add to My Selection
+                </button>
+            </div>
+        </article>
+
+        <article class="food-card">
+            <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+                alt="Fresh salad"
+            >
+
+            <div class="food-info">
+                <h3>Garden Salad</h3>
+
+                <p>
+                    A refreshing mix of green vegetables
+                    and colorful, healthy ingredients.
+                </p>
+
+                <button onclick="selectFood(2)">
+                    Add to My Selection
+                </button>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="selection-section">
+        <h2>Your Food Selection</h2>
+
+        <p id="message" aria-live="polite">
+            Choose a food item to get started!
+        </p>
+
+        <a class="selection-link" href="selection.html">
+            View My Selection →
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p>FreshBite Food Store | W11A JavaScript Project</p>
+</footer>
+
+<!-- Connect the HTML page to JavaScript. -->
+<script src="app.js"></script>
+```
+
+</body>
+</html>
